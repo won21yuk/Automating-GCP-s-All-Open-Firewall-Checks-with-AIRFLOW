@@ -7,6 +7,7 @@ import os
 sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 from utils.dag_funcs import auto_firewall_check
 
+# 인스턴스 선언
 auto = auto_firewall_check()
 
 # arguments 작성
@@ -21,6 +22,7 @@ default_args = {
 # dag 선언
 dag = DAG(
     dag_id="Automating_with_AIRFLOW",
+    # 오늘부터 3일마다 15시에 작동하도록 스케줄링
     schedule_interval="0 15 */3 * *",
     start_date=yesterday("Asia/Seoul"),
     default_args=default_args

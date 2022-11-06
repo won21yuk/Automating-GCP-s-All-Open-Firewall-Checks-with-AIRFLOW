@@ -78,7 +78,7 @@ class auto_firewall_check:
                 exec_date=context.get('execution_date'),
                 log_url=context.get('task_instance').log_url,
             )
-        # SlackWebhookOperator 사용
+        # SlackWebhookOperator 사용하여 http 통신
         failed_alert = SlackWebhookOperator(
             task_id='slack_notification_failure',
             http_conn_id='slack_webhook',
@@ -96,7 +96,7 @@ class auto_firewall_check:
                           + "```"
                           + "\n")
         slack_message = ":bell:" + " *방화벽 모니터링* \n" + message_result
-        # SlackWebhookOperator 사용
+        # SlackWebhookOperator 사용하여 http 통신
         success_alert = SlackWebhookOperator(
             task_id='slack_notification_success',
             http_conn_id='slack_webhook',
