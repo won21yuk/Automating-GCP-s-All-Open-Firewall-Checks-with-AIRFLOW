@@ -19,7 +19,8 @@ from oauth2client.client import GoogleCredentials
 import pandas as pd
 
 class auto_firewall_check:
-    pass
+    def __init__(self):
+        pass
 
     # GCP All-Open 방화벽 체크 메서드
     def firewall_checks(self):
@@ -87,7 +88,7 @@ class auto_firewall_check:
     # success callback
     def on_success_callback(self, context):
         # df 형태로 all-open 방화벽 가져오기
-        df = auto_firewall_check.firewall_checks()
+        df = self.firewall_checks()
         # 전송할 메세지
         message_result = ("GCP 인스턴스 방화벽에 0.0.0.0/0 으로 오픈 된 방화벽 정책이 있습니다.\n\n"
                           + "```"
