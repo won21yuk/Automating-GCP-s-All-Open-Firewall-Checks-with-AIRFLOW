@@ -103,4 +103,3 @@ class auto_firewall_check:
             message=slack_message
         )
         return success_alert.execute(context=context)
-
