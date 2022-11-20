@@ -22,8 +22,7 @@ default_args = {
 # dag 선언
 dag = DAG(
     dag_id="Automating_with_AIRFLOW",
-    # 오늘부터 3일마다 15시에 작동하도록 스케줄링
-    schedule_interval="0 15 */3 * *",
+    schedule_interval=None,
     start_date=yesterday("Asia/Seoul"),
     default_args=default_args
 )
