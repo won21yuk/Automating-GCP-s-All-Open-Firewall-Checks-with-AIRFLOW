@@ -3,6 +3,8 @@ from airflow.operators.python import PythonOperator
 from pendulum import yesterday
 from utils.dag_funcs import auto_firewall_check
 
+
+
 # 인스턴스 선언
 auto = auto_firewall_check()
 
