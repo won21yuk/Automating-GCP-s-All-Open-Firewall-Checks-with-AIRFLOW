@@ -8,7 +8,7 @@ steps:
     - '-d'
     - '-r'
     - 'dags'
-    - 'gs:/${_GCS_BUCKET}/dags'
+    - 'gs://asia-northeast1-firewall-ch-b8007ea5-bucket/dags'
 - name: gcr.io/cloud-builders/gsutil
   args:
     - '-m'
@@ -16,6 +16,6 @@ steps:
     - '-d'
     - '-r'
     - 'utils'
-    - 'gs:/${_GCS_BUCKET}/utils'
+    - 'gs://asia-northeast1-firewall-ch-b8007ea5-bucket/utils'
 options:
   logging: CLOUD_LOGGING_ONLY
