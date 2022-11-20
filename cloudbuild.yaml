@@ -15,7 +15,7 @@ steps:
     - 'rsync'
     - '-d'
     - '-r'
-    - 'dags'
+    - 'dags/utils'
     - 'gs://asia-northeast1-firewall-ch-b8007ea5-bucket/dags/utils'
 options:
   logging: CLOUD_LOGGING_ONLY
