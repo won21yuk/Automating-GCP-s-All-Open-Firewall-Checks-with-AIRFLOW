@@ -15,7 +15,7 @@ steps:
     - 'rsync'
     - '-d'
     - '-r'
-    - 'plugins'
+    - 'utils'
     - 'gs://${_GCS_BUCKET}/utils'
 options:
   logging: CLOUD_LOGGING_ONLY
