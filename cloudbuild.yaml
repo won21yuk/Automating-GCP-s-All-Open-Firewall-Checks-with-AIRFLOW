@@ -8,7 +8,7 @@ steps:
     - '-d'
     - '-r'
     - 'dags'
-    - 'gs://${_GCS_BUCKET}/dags'
+    - 'gs:/${_GCS_BUCKET}/dags'
 - name: gcr.io/cloud-builders/gsutil
   args:
     - '-m'
@@ -16,6 +16,6 @@ steps:
     - '-d'
     - '-r'
     - 'utils'
-    - 'gs://${_GCS_BUCKET}/utils'
+    - 'gs:/${_GCS_BUCKET}/utils'
 options:
   logging: CLOUD_LOGGING_ONLY
