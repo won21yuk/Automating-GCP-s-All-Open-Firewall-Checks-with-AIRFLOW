@@ -29,7 +29,7 @@ class auto_firewall_check:
             service = discovery.build('compute', 'v1', credentials=credentials)
 
             # Project ID for this request.
-            project = 'gcp-project-366909'
+            project = 'angelic-turbine-366714'
             # TODO: Update placeholder value.
             request = service.firewalls().list(project=project)
             lst = []
