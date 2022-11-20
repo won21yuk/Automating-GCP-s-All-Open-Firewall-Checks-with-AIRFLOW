@@ -4,7 +4,7 @@ from pendulum import yesterday
 
 import sys
 import os
-sys.path.append(os.path.join(os.environ['_GCS_FOLDER']))
+sys.path.append(os.path.join(os.environ['_GCS_BUCKET']))
 from utils.dag_funcs import auto_firewall_check
 
 # 인스턴스 선언
