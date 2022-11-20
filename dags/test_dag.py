@@ -15,8 +15,6 @@ dag = DAG(
 def test_callable():
     print(os.getcwd())
     print(os.path.abspath(__file__))
-    print(os.path.abspath(os.path.dirname(__file__)))
-    print(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
     print(os.path.dirname(os.path.join(os.environ['DAGS_FOLDER'])))
 
 test = PythonOperator(task_id='test',
